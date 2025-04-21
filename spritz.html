@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flavours - YesYouCan Cocktails</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: #f1b2bc;
+        }
+        .nav-btn, .cart-btn {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(0, 39, 91);
+        padding: 12px 24px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        header{
+            background-color: #a46570;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+        background-color:#e35a5a;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        margin-top: 50px;
+        }
+
+    .footer-content p {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+
+    .footer-content {
+        margin-top: -135px;
+        margin-right: 1050px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+        transform: scale(1.2);
+    }
+
+    .footer-left{
+        text-align: left;
+        margin-right: 900px;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://yesyoucandrinks.com/cdn/shop/t/33/assets/Logo.png?v=31988141688106634491700490867">
+        <nav>
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="flavours.html" class="nav-btn">Flavours</a>
+            <a href="login.html" class="nav-btn" id="loginBtn">Login</a>
+            <a href="cart.html" class="cart-btn">
+                <span class="cart-icon">🛒</span> Cart
+            </a>
+        </nav>
+    </header>
+    <div style="padding-bottom: 200px;">
+    <div style="border: 3.5px solid rgb(0, 39, 91); margin-top: 25px; margin-left: 25px; margin-right: 875px; border-radius: 20px;">
+        <img src="https://yesyoucandrinks.com/cdn/shop/files/box2_3.png?v=1726868475&width=1920" height="600" width="600" 
+        style="display: block;">
+    </div>
+    <div style="margin-top: -600px; margin-left: 250px; color: rgb(0, 39, 91);">
+        <p style="text-align: center; font-size: 40px;margin-left: 100px"><b>Spritz (4 Can Pack)</b></p>
+        <pre style="text-align: left; margin-left: 370px; font-size: 17px;">
+            Zesty orange and rhubarb herbal scents finished with a balmy bitterness. 
+            Serve on the rocks with a slice of fresh orange for an Amalfi aperitif or crack
+            open the can and sip as is. Crafted with all natural botanicals, extracts and 
+            distillates Spritz and giggles!
+        </pre>
+        <p style="margin-left: -220px; font-size: 30px;">₹250</p>
+        <button type="button" id="addToCart" class="nav-btn" style="margin-left:-170px; border: 0px; background-color: #a46570;">
+            Add to Cart
+        </button>        
+    </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("addToCart").addEventListener("click", function () {
+                let product = {
+                    name: "Spritz (4 Can Pack)",
+                    price: 250,
+                    quantity: 1
+                };
+    
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+                let existingProduct = cart.find(item => item.name === product.name);
+                if (existingProduct) {
+                    existingProduct.quantity += 1; 
+                } else {
+                    cart.push(product);
+                }
+    
+                localStorage.setItem("cart", JSON.stringify(cart));
+                alert("Added to cart!");
+            });
+        });
+    </script>
+<footer>
+    <div class="footer-left">
+        <img src="https://yesyoucandrinks.com/cdn/shop/files/WordmarkC1__1.png?v=1686444149&width=1400" width="50" height="150">
+    </div>
+    <div class="footer-content">
+        <p><strong>YesYouCan Cocktails</strong></p>
+        <p>📞 Phone: +1 234 567 890</p>
+        <p>📧 Email: support@yesyoucan.com</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/login/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook"></a>
+            <a href="https://x.com/i/flow/login?lang=en" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>   
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+let loginBtn = document.getElementById("loginBtn");
+if (localStorage.getItem("isLoggedIn") === "true") {
+    loginBtn.innerText = "Logout";
+    loginBtn.href = "#"; 
+    loginBtn.addEventListener("click", function() {
+        localStorage.removeItem("isLoggedIn");
+        window.location.href = "index.html"; 
+    });
+}
+});
+
+</script>   
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YesYouCan Cocktails</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body{
+            background-image: url("https://yesyoucandrinks.com/cdn/shop/files/FB_image_1600_x_800_px.png?v=1728873090&width=1920");
+            background-size:100%;
+            background-position-y: 80px;
+            background-position-x: 20%;
+            background-repeat: no-repeat;
+        }
+        h1,p{
+            color: rgb(0, 39, 91);
+            margin-left: 20px;
+        }
+        .nav-btn, .cart-btn {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(0, 39, 91);
+        padding: 12px 24px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        header{
+            background-color: beige;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+        }
+        footer {
+        background-color:#e35a5a;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .footer-content {
+            margin-top: -135px;
+            margin-right: 1050px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-left{
+            text-align: left;
+            margin-right: 900px;
+        }
+        .comparison-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px;
+            background-color: #902d68;
+        }
+        .column {
+            width: 45%;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .yes-you-can {
+            background-color: #902d68; 
+            color: #ff7043;
+        }
+
+        .alcoholic-cocktails {
+            background-color: #fce8dc; 
+            color: #000;
+        }
+
+        .column img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        li::before {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://yesyoucandrinks.com/cdn/shop/t/33/assets/Logo.png?v=31988141688106634491700490867">
+        <nav>
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="flavours.html" class="nav-btn">Flavours</a>
+            <a href="login.html" class="nav-btn" id="loginBtn">Login</a>
+            <a href="cart.html" class="cart-btn">
+                <span class="cart-icon">🛒</span> Cart
+            </a>
+        </nav>
+    </header>
+
+    <index style="margin-top: 50px; padding-bottom: 150px;">
+        <h1 style="text-align: left;">YesYouCan Cocktails</h1>
+        <p style="text-align: left; font-size: 22px;">Feel the Punch!</p>
+        <p style="text-align: left; font-size: 22px;">Welcome to the world where <br> mythical blast meets unparalleled punch.</p>
+        <br><br>
+        <p style="text-align: left; font-size: 26px;"><b>"Booze, liquor; whatever you want to call it,<br> 
+            our social lubricant of choice is a <br> surefire ticket to good times,
+            bad times,<br> lost weekend times and<br> often paying a heavy toll the next day, times."</b></p>
+    </index>
+
+    <div class="awards">
+        <p>Awards over the years!</p>
+        <img src="https://yesyoucandrinks.com/cdn/shop/files/badgeimage.png?v=1686311715&width=1920" width="800" height="100">
+    </div>
+
+    <div style="background-color: #902d68; margin: -30px;font-size: 28px;">
+        <p style="color: #fce8dc;"><b>Compare For Yourself!</b></p>
+    </div>
+
+    <div class="comparison-container">
+        <div class="column yes-you-can">
+            <img src="https://yesyoucandrinks.com/cdn/shop/files/box2_3.png?v=1726868475&width=1920" alt="Yes You Can">
+            <h2>Yes You Can</h2>
+            <ul>
+                <li>✅ Healthier for you</li>
+                <li>✅ Drink as many as you want</li>
+                <li>✅ Drink & drive with 0 worries</li>
+                <li>✅ Suitable for breastfeeding & pregnant moms</li>
+                <li>✅ 64 cal/serving max</li>
+                <li>✅ Energized & ready to face the day</li>
+                <li>✅ indextain your 5-star Uber rider rating</li>
+                <li>✅ A pleasant flash of warmth in the back of your throat</li>
+                <li>✅ Delicious</li>
+            </ul>
+        </div>
+
+        <div class="column alcoholic-cocktails">
+            <img src="https://yesyoucandrinks.com/cdn/shop/files/alc-compare.png?v=1686392135&width=150" alt="Alcoholic Cocktail">
+            <h2>Alcoholic Cocktails</h2>
+            <ul>
+                <li>❌ Bad for your health</li>
+                <li>❌ Too many and you lose consciousness</li>
+                <li>❌ Pretty sure drinking & driving is illegal</li>
+                <li>❌ Dangerous for breastfeeding & pregnant moms</li>
+                <li>❌ 125+ cal/serving</li>
+                <li>❌ Energy-draining hangovers</li>
+                <li>❌ Get on Uber's blacklist</li>
+                <li>❌ A pleasant flash of warmth in the back of your throat</li>
+                <li>✅ Delicious</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginBtn = document.getElementById("loginBtn");
+    
+            if (localStorage.getItem("loggedIn") === "true") {
+                loginBtn.textContent = "Logout";
+                loginBtn.href = "#";
+                loginBtn.addEventListener("click", function() {
+                    localStorage.removeItem("loggedIn");
+                    window.location.href = "index.html";
+                });
+            }
+        });
+        const loginBtn = document.getElementById("loginBtn");
+
+    function updateLoginStatus() {
+        const loggedInUser = localStorage.getItem("username");
+        if (loggedInUser) {
+            loginBtn.textContent = "Logout";
+            loginBtn.href = "#";
+            loginBtn.addEventListener("click", function () {
+                localStorage.removeItem("username");
+                alert("Logged out successfully!");
+                window.location.href = "index.html";
+            });
+        } else {
+            loginBtn.textContent = "Login";
+            loginBtn.href = "login.html";
+        }
+    }
+
+    updateLoginStatus();
+
+    </script>
+
+    <footer>
+        <div class="footer-left">
+            <img src="https://yesyoucandrinks.com/cdn/shop/files/WordmarkC1__1.png?v=1686444149&width=1400" width="50" height="150">
+        </div>
+        <div class="footer-content">
+            <p><strong>YesYouCan Cocktails</strong></p>
+            <p>📞 Phone: +1 234 567 890</p>
+            <p>📧 Email: support@yesyoucan.com</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/login/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook"></a>
+                <a href="https://x.com/i/flow/login?lang=en" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
